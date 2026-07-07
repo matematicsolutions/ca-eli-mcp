@@ -1,5 +1,7 @@
 # ca-eli-mcp
 
+<!-- mcp-name: io.github.matematicsolutions/ca-eli-mcp -->
+
 MCP server for Canadian federal legislation via the Justice Laws Website
 (laws-lois.justice.gc.ca), the Department of Justice Canada's official
 source for consolidated Acts and regulations. Bilingual (English/French).
