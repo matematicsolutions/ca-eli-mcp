@@ -21,6 +21,7 @@ from mcp.types import ToolAnnotations
 
 from .audit import AuditLogger, hash_input, timer
 from .citations import build_citation, parse_metadata
+from . import runtime
 from .client import DEFAULT_BASE_URL, JusticeLawsClient
 
 INSTRUCTIONS = """\
@@ -77,7 +78,7 @@ _VALID_LANGS = frozenset({"eng", "fra"})
 
 
 def _base_url() -> str:
-    return os.environ.get("CA_ELI_BASE_URL", DEFAULT_BASE_URL).rstrip("/")
+    return os.environ.get("CA_ELI_BASE_URL", runtime.base_url("eli", DEFAULT_BASE_URL)).rstrip("/")
 
 
 def _audit() -> AuditLogger:
