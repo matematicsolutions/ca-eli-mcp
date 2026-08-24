@@ -35,6 +35,7 @@ This MCP server exposes the Justice Laws Website (laws-lois.justice.gc.ca), the 
 
 ## Hard constraints
 
+- **Do not answer past the edge of this corpus** - when a search comes back empty, or the question touches material this connector does not carry, call `ca_coverage` and relay what it says is missing. Absence here is not absence in the law.
 - **No free-text search** - the Justice Laws Website is addressed by code, not keywords (same limitation as ie-eli-mcp for Ireland). Discover a code from an external reference (a citation the user already has, or a known short title) before calling these tools.
 - **Every response has `human_readable_citation` + `source_url`** - cite both to the user.
 - **No full-text search across all Canadian law** - this is federal legislation only; provincial/territorial law is out of scope.
