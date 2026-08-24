@@ -23,6 +23,7 @@ source for consolidated Acts and regulations. Bilingual (English/French).
 |---|---|
 | `ca_get_document` | Metadata (title, in-force status, last-consolidated date) for one act or regulation |
 | `ca_get_text` | Full consolidated XML text of the same document |
+| `ca_coverage` | Declare what this connector covers, when each family was captured, and - explicitly - what it does NOT cover. Every gap carries a fallback. |
 
 Every response carries `lex_uri` (the XML source), `source_url` (the public
 HTML page), and `human_readable_citation` (e.g. `"Criminal Code (C-46)"`).
